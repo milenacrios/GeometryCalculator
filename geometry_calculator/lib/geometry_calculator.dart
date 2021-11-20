@@ -1,3 +1,5 @@
+// ignore_for_file: unrelated_type_equality_checks
+
 import 'dart:io';
 
 class GeometryCalculator {
@@ -15,7 +17,8 @@ class GeometryCalculator {
     } else if (tipo == '4') {
       return area = (medidaA * medidaA) * medidaB;
     }
-    return 0;
+    area = 0;
+    return area;
   }
 }
 
@@ -33,10 +36,8 @@ void main() {
   tipoF = stdin.readLineSync() as String;
   print(
       "--------------Digite as duas medidas necessárias para calcular a àrea da figura--------------");
-
   print("--------------Medida 1:--------------");
   medidaA = stdin.readLineSync() as double;
-
   print("--------------Medida 2--------------");
   medidaB = stdin.readLineSync() as double;
 
